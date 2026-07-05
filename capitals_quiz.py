@@ -10,7 +10,7 @@ while True:
             country = choice(list(easy.keys()))
             capital = input(f"whats the capital of '{country}' ")
             
-            if capital == easy[country]:
+            if capital.lower() == easy[country].lower():
                 print('correct !')
             else:
                 print(f'wrong, the capital of {country} is {easy[country]}')
