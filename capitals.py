@@ -177,3 +177,4 @@ very_hard = [
     {"country": "Zimbabwe", "capital": "Harare"}
 ]
 
+combined = easy + medium + hard + very_hard
