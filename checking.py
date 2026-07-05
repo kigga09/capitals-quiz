@@ -1,6 +1,7 @@
-from random import choice
+#this file is for checking if all the countries are included
 
-#data base 
+from capitals import easy, medium, hard, very_hard
+
 capitals = [
     {"country": "Afghanistan", "capital": "Kabul"},
     {"country": "Albania", "capital": "Tirana"},
@@ -81,6 +82,7 @@ capitals = [
     {"country": "Iran", "capital": "Tehran"},
     {"country": "Iraq", "capital": "Baghdad"},
     {"country": "Ireland", "capital": "Dublin"},
+    {"country": "Israel", "capital": "Jerusalem"},
     {"country": "Italy", "capital": "Rome"},
     {"country": "Jamaica", "capital": "Kingston"},
     {"country": "Japan", "capital": "Tokyo"},
@@ -132,7 +134,6 @@ capitals = [
     {"country": "Pakistan", "capital": "Islamabad"},
     {"country": "Palau", "capital": "Ngerulmud"},
     {"country": "Panama", "capital": "Panama City"},
-    {"country": "Palestine", "capital": "Jerusalem"},
     {"country": "Papua New Guinea", "capital": "Port Moresby"},
     {"country": "Paraguay", "capital": "Asunción"},
     {"country": "Peru", "capital": "Lima"},
@@ -170,3 +171,39 @@ capitals = [
     {"country": "Zambia", "capital": "Lusaka"},
     {"country": "Zimbabwe", "capital": "Harare"}
 ]
+
+all_lists = easy + medium + hard + very_hard
+
+original = [item["country"] for item in capitals]
+combined = [item["country"] for item in all_lists]
+
+# Check for missing countries
+missing = []
+
+for country in original:
+    if country not in combined:
+        missing.append(country)
+
+# Check for duplicate countries
+duplicates = []
+
+for country in combined:
+    if combined.count(country) > 1 and country not in duplicates:
+        duplicates.append(country)
+
+# Print results
+if missing:
+    print("Missing countries:")
+    for country in missing:
+        print("-", country)
+else:
+    print("No missing countries!")
+
+print()
+
+if duplicates:
+    print("Duplicate countries:")
+    for country in duplicates:
+        print("-", country)
+else:
+    print("No duplicate countries!")
