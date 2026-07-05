@@ -6,7 +6,7 @@ while True:
     difficulty = input("Choose a difficulty level (easy, medium, hard, very hard) (type 'q' to quit): ").lower()
     if difficulty.lower() in ['easy', 'medium', 'hard', 'very hard']:
         if difficulty.lower() == 'easy':
-            capital = choice(easy)
+            pass
     elif difficulty.lower() == 'q':
         break
     else:
