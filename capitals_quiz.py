@@ -1,5 +1,18 @@
-from captals import easy, medium, hard, very_hard, combined
-import random
+from capitals import easy, medium, hard, very_hard, combined
+from random import choice
 
 #let the user chose difficylty level
-difficulty = input("Choose a difficulty level (easy, medium, hard, very hard): ").lower()
+while True:
+    difficulty = input("Choose a difficulty level (easy, medium, hard, very hard) (type 'q' to quit): ").lower()
+    if difficulty.lower() in ['easy', 'medium', 'hard', 'very hard']:
+        if difficulty.lower() == 'easy':
+            capital = choice(easy)
+    elif difficulty.lower() == 'q':
+        break
+    else:
+        print('thats not a valid difficulty')
+        again = input("wanna play again ? ('y' for yes and 'n' for no)")
+        if again == 'y':
+            continue
+        else:
+            break
