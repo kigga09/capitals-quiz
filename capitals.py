@@ -178,4 +178,4 @@ very_hard = {
     "Zimbabwe": "Harare"
 }
 
-combined = easu | medium | hard | very_hard
+combined = easy | medium | hard | very_hard
