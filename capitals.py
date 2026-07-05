@@ -133,10 +133,11 @@ hard = [
     {"country": "Kyrgyzstan", "capital": "Bishkek"},
     {"country": "Lesotho", "capital": "Maseru"},
     {"country": "Liberia", "capital": "Monrovia"},
-    {"country": "Luxembourg", "capital": "Luxembourg"}
+    {"country": "Luxembourg", "capital": "Luxembourg"},
     {"country": "Antigua and Barbuda", "capital": "Saint John's"},
     {"country": "Grenada", "capital": "Saint George's"}
 ]
+
 
 very_hard = [
     {"country": "Kiribati", "capital": "South Tarawa"},
